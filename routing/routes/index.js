@@ -12,18 +12,18 @@ const router = express.Router();
 router.post(
     '/', bodyParser.json(),
     bodyParser.urlencoded({extends: true}),
-    (req, res, next)=> {
+    (req, res, next) => {
         res.send(req.body)
     }
 )
 
 //!router index method delete
 
-router.delete('/:id',(req, res, next)=> {
+router.delete('/:id',(req, res, next) => {
     res.send(`Data dengan id ${req.params.id} telah dihapus`)
 })
 
-router.delete('/',(req, res, next)=> {
+router.delete('/',(req, res, next) => {
     res.send('Tidak dapat menghapus,because you not yet in the id')
 })
 module.exports = router
